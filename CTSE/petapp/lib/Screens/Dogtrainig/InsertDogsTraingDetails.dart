@@ -364,7 +364,7 @@ Stack(
                   
                         .set({
                            'name': nameController.text.toString(),
-                          'age':tainingDetailsController.text.toString(),
+                          'details':tainingDetailsController.text.toString(),
                            'catagory':tainingcatgoryController.text.toString(),
                            'image':downloadURL.toString(),
                             'uid':user!.uid.toString(),
@@ -377,7 +377,7 @@ Stack(
         
                     }).then((value) {
                       
-                      toastMessage ('Dog Added Successfully');
+                      toastMessage ('Tring Details  Successfully Added');
                       Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -390,7 +390,7 @@ Stack(
                       
           
                     }).onError((error, stackTrace) {
-                      toastMessage ('Dog Added Failed');
+                      toastMessage ('Dog Update  Successfully');
                            setState(() {
                             loading = false ;
                            });

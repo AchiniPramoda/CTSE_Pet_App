@@ -25,7 +25,7 @@ class _UpdateDogsState extends State<UpdateDogs> {
   @override
   void initState() {
     super.initState();
-    dbRef = FirebaseDatabase.instance.ref().child('Dogs');
+    dbRef = FirebaseDatabase.instance.ref().child('Trining');
     getDogsData();
   }
  

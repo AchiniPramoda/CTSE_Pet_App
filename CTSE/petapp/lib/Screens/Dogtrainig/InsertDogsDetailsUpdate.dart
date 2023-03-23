@@ -25,7 +25,7 @@ class UpdateDogs extends StatefulWidget {
 class _UpdateDogsState extends State<UpdateDogs> {
 
     final _formKey = GlobalKey<FormState>();
-    final databaseRef = FirebaseDatabase.instance.ref().child('Dogs');
+    final databaseRef = FirebaseDatabase.instance.ref().child('Traing');
     firebase_storage.FirebaseStorage storage = firebase_storage.FirebaseStorage.instance;
     File? _image;
     bool loading = false ;
@@ -201,7 +201,7 @@ Future getImageC() async {
                             fontWeight: FontWeight.bold,
                           )
                         ),
-                  hintText: 'Insert Dogs Name',
+                  hintText: 'Insert Traing Name',
                  
                   border: OutlineInputBorder(
                     
@@ -246,7 +246,7 @@ Future getImageC() async {
                             fontWeight: FontWeight.bold,
                           )
                         ),
-                  hintText: 'Insert Dog Age',
+                  hintText: 'Insert Traing Category',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -289,7 +289,7 @@ Future getImageC() async {
                           )
                         ),
                    
-                  hintText: 'Insert Dog Catgory',
+                  hintText: 'Insert Traing Details',
                 
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -337,7 +337,7 @@ Future getImageC() async {
                   
                         .set({
                            'name': nameController.text.toString(),
-                          'age':tainingDetailsController.text.toString(),
+                          'details':tainingDetailsController.text.toString(),
                            'catagory':tainingcatgoryController.text.toString(),
                            'image':downloadURL.toString(),
                             'uid':user!.uid.toString(),
