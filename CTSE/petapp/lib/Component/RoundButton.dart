@@ -16,13 +16,13 @@ class RoundButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 80,
+        height: 50,
         width: 180,
         
         decoration: BoxDecoration(
-          color: Color(0xff003F36),
+          color: Color(0xffDDA962),
           borderRadius: BorderRadius.circular(15),
-          border: Border.all(color: Color(0xff6ED1BA), width: 2),
+          border: Border.all(color: Color(0xffDDA962), width: 2),
     
         ),
         

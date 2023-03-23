@@ -3,13 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:petapp/Screens/MainPages/HomePage.dart';
-import 'package:petapp/Screens/MainPages/LandingPage.dart';
 import 'package:petapp/Screens/UserManagement/Signup.dart';
-
 import '../../Component/RoundButton.dart';
-
-
-
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -19,6 +14,7 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+
   bool loading = false;
   final _formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
@@ -49,50 +45,55 @@ class _SignInScreenState extends State<SignInScreen> {
         return true;
       },
       child: Scaffold(
-        
+        backgroundColor: Color.alphaBlend(Colors.white10, Colors.black38),
         body: SingleChildScrollView(
           child: Column(
             children:[ 
+
+              SizedBox(
+                height: 50,
+              ),
+              
               
               Container(
-            margin: EdgeInsets.zero,
-              padding: EdgeInsets.zero,
-              width: double.infinity,
-              height: 250, 
-              decoration: BoxDecoration(
-               
-                color: Color(0x1f000000),
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
-                ),
-                border: Border.all(color: Color(0xff6ED1BA), width: 2),  
-               ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: const Text(
-                    "LOGIN HERE",
-                    style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                Divider(
-              color: Colors.white,
-              height: 16,
-              thickness: 7,
-              indent: 100,
-              endIndent: 100,
-            ), 
-              ],
-            ),
-            ),
+                height: 300,
+                
+                child: Row(children: [
+                      Container(
+                        height: 240,
+                        width: 200,
+                        
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Hi Dear,',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Welcome Back',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        height: 240,
+                        width: 160,
+                        child: Image.asset('assets/login.png'),
+                      ),
+                      
+                ],)
+              ),
               
               SizedBox(
                 height: 60,
@@ -121,12 +122,12 @@ class _SignInScreenState extends State<SignInScreen> {
                               decoration: const InputDecoration(
                                   hintText: 'Email',
                                   prefixIcon: Icon(Icons.alternate_email,
-                                      color: Color(0xff6ED1BA)
+                                      color: Color.fromARGB(255, 1, 11, 9)
                                       ),
                                   
                                   
                                   filled: true,
-                   fillColor: Color(0xff306f60),     
+                   fillColor: Color(0xffDDA962),     
                    hintStyle: (
                         TextStyle(
                             color: Colors.white,
@@ -172,12 +173,12 @@ class _SignInScreenState extends State<SignInScreen> {
                             obscureText: true,
                             decoration: const InputDecoration(
                                 hintText: 'Password',
-                                prefixIcon: Icon(Icons.lock_open,
-                                   color: Color(0xff6ED1BA)
-                                 ),
+                                  prefixIcon: Icon(Icons.lock_open,
+                                      color: Color.fromARGB(255, 1, 11, 9)
+                                      ),
                                 
                                 filled: true,
-                   fillColor: Color(0xff306f60),     
+                   fillColor: Color(0xffDDA962),     
                    hintStyle: (
                         TextStyle(
                             color: Colors.white,
@@ -260,7 +261,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         },
                         child: Text('Forgot Password?',
                             style: TextStyle(
-                                color: Color(0xff6ED1BA),
+                                color: Color(0xffDDA962),
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold))),
                         
@@ -272,7 +273,12 @@ class _SignInScreenState extends State<SignInScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Don't have an account?"),
+                      const Text("Don't have an account?",
+                      
+                          style: TextStyle(
+                              color: Color(0xffDDA962),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold)),
                       TextButton(
                           onPressed: () {
                             Navigator.push(
@@ -281,10 +287,8 @@ class _SignInScreenState extends State<SignInScreen> {
                                     builder: (context) => SignUpScreen()));
                           },
                           child: Text('Sign up',
-                          
-                          
                               style: TextStyle(
-                                  color: Color(0xff6ED1BA),
+                                  color: Color(0xffDDA962),
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold))),
                     ],

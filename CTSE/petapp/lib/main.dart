@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
+import 'package:petapp/Screens/Dogs/InsertDogsDetails.dart';
 import 'package:petapp/Screens/MainPages/SpashScreen.dart';
+
+import 'Screens/Dogtrainig/InsertDogsTraingDetails.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple
       ),
-      home: (SplashScreen()),
+      home: (InsertDogTraining()),
     );
   }
 }

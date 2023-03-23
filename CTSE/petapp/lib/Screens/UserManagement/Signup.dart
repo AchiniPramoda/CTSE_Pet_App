@@ -44,53 +44,52 @@ String email = '', password = '';
     return ModalProgressHUD(
       inAsyncCall: showSpinner,
       child: Scaffold(
+        backgroundColor: Color.alphaBlend(Colors.white10, Colors.black38),
         body: SingleChildScrollView(
+          
           child: Column(
             children: [
              SingleChildScrollView(
               
                 child: Column(
                   children:[ 
-                    
-                    Container(
-            margin: EdgeInsets.zero,
-              padding: EdgeInsets.zero,
-              width: double.infinity,
-              height: 250, 
-              decoration: BoxDecoration(
-               
-                color: Color(0x1f000000),
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
-                ),
-                border: Border.all(color: Color(0xff6ED1BA), width: 2),  
-               ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: const Text(
-                    "Register Here",
-                    style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                Divider(
-              color: Colors.white,
-              height: 16,
-              thickness: 7,
-              indent: 100,
-              endIndent: 100,
-            ), 
-              ],
-            ),
-            ),
+                  
+                    SizedBox(
+                height: 50,
+              ),
+              
+              
+              Container(
+                height: 300,
+                
+                child: Row(children: [
+                      Container(
+                        height: 240,
+                        width: 240,
+                        
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Create An Account',
+                              style: TextStyle(
+                                color: Color(0xffDDA962),
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        height: 240,
+                        width: 120,
+                        child: Image.asset('assets/login.png'),
+                      ),
+                      
+                ],)
+              ),
                     
                     
                     
@@ -131,7 +130,7 @@ String email = '', password = '';
                                   },
                                     decoration: InputDecoration(
                                     filled: true,
-                                fillColor: Color(0xff306f60),     
+                                fillColor: Color(0xffDDA962),     
                                 hintStyle: (
                                    TextStyle(
                                         color: Colors.white,
@@ -144,16 +143,16 @@ String email = '', password = '';
                 
                                 border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(color: Color(0xff6ED1BA), width: 2),
+                            borderSide: BorderSide(color: Color(0xffDDA962), width: 2),
                     ),
                     enabledBorder: OutlineInputBorder(
 
                             borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(color: Color(0xff6ED1BA), width: 2),
+                            borderSide: BorderSide(color: Color(0xffDDA962), width: 2),
                     ),
                     focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(color: Color(0xff6ED1BA), width: 2),
+                            borderSide: BorderSide(color: Color(0xffDDA962), width: 2),
                     ),
                    
                                   ),
@@ -173,7 +172,7 @@ String email = '', password = '';
                                 padding: const EdgeInsets.all(8.0),
                                 child: TextFormField(
                                    style: TextStyle(
-                                  color: Colors.white,
+                                  color: Color(0xffDDA962),
                               fontSize: 19,
                                 ),
                                   controller: passwordController,
@@ -186,7 +185,7 @@ String email = '', password = '';
                                   },
                                  decoration: InputDecoration(
                                     filled: true,
-                                fillColor: Color(0xff306f60),     
+                                fillColor: Color(0xffDDA962),     
                                 hintStyle: (
                                    TextStyle(
                                         color: Colors.white,
@@ -200,16 +199,16 @@ String email = '', password = '';
                                 
                       border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(color: Color(0xff6ED1BA), width: 2),
+                            borderSide: BorderSide(color: Color(0xffDDA962), width: 2),
                     ),
                     enabledBorder: OutlineInputBorder(
 
                             borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(color: Color(0xff6ED1BA), width: 2),
+                            borderSide: BorderSide(color: Color(0xffDDA962), width: 2),
                     ),
                     focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
-                            borderSide: BorderSide(color: Color(0xff6ED1BA), width: 2),
+                            borderSide: BorderSide(color: Color(0xffDDA962), width: 2),
                     ),
                    
                                   ),
@@ -246,12 +245,12 @@ String email = '', password = '';
                               
                             }
                           },
-                           color: Color(0xff003F36),
+                           color: Color(0xffDDA962),
                            elevation: 3,
                            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 25),
                                 shape: RoundedRectangleBorder(
                                    borderRadius: BorderRadius.circular(19),
-                                      side: BorderSide(color: Color(0xff6ED1BA), width: 2),
+                                      side: BorderSide(color: Color(0xffDDA962), width: 2),
               ),
                           height: 20,
                           minWidth: 180,
@@ -282,7 +281,8 @@ String email = '', password = '';
                               child: Text(
                                 'Sign In',
                                 style: TextStyle(
-                                  color: Color(0xff6ED1BA),
+                                  color: Color(0xffDDA962),
+                                  fontSize: 20,
                                 ),
                               ),
                             ),
